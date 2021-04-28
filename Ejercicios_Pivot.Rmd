@@ -1,0 +1,73 @@
+---
+title: "Taller Tidyr"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(datos)
+```
+
+## Pivot longer
+
+```{r ver_tabla}
+view(tabla4a)
+```
+
+
+```{r pivot_longer}
+tabla_larga <-tabla4a %>% 
+  pivot_longer('1999':'2000', names_to = "año", values_to = "casos")
+```
+
+## Pivot wider
+```{r ver_tabla2}
+view(tabla2)
+```
+
+```{r pivot_wider}
+tabla_ancha <- tabla2 %>% 
+  pivot_wider(names_from = tipo, values_from = cuenta )
+```
+
+```{r ver_tabla5}
+view(tabla5)
+```
+
+```{r unite}
+aux_unite <- tabla5 %>% 
+  unite(anio, c("siglo", "anio"), sep = "")
+```
+
+```{r separate}
+tabla_nor <- aux_unite %>% 
+  separate(col = tasa, into = c("casos", "poblacion"))
+```
+
+## Ejercicio
+
+```{r ejercicio3}
+tabla_nor %>% 
+  mutate(poblacion = as.numeric(poblacion)/100) %>% 
+  unite("tasa",  c(casos, poblacion), sep = "/") %>% 
+  separate(tasa, c("casos", "poblacion", "dec"))
+
+```
+ 
+```{r ejercicio4}
+a <- tibble(x = c("a,b,c", "d,e,f,g",   "h,i,j")) %>%
+  separate(x, c("one", "two",       "three"), remove = FALSE, fill = "right")
+
+df <- data.frame(x = c("x", "x y", "x y z", NA))
+df %>% separate(x, c("a", "b"))
+df %>% separate(x, c("a", "b"), extra = "drop", fill = "right")
+df %>% separate(x, c("a", "b"), extra = "merge", fill = "left")
+
+df1 <- data.frame(x = c("x: 123", "y: error: 7"))
+df1 %>% separate(x, c("key", "value"), ": ", extra = "merge")
+```
+
+
+
