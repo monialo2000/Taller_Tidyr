@@ -17,7 +17,8 @@ Veamos la tabla4a que estructura tiene
 view(tabla4a)
 ```
 
-Ejercicio: Completar los espacios en blanco con lo que corresponda para que la tabla quede "ordenada"
+## Ejercicio NB_1: 
+Completar los espacios en blanco con lo que corresponda para que la tabla quede "ordenada"
 
 c('1999','2000')
 anio
@@ -37,7 +38,8 @@ view(tabla2)
 ```
 
 
-Ejercicio: ordenar los trozos de la función pivot_wider que figuran aquí abajo, para poder completar la función del  chunk y poder procesarlo.
+## Ejercicio NB_2: 
+ordenar los trozos de la función pivot_wider que figuran aquí abajo, para poder completar la función del  chunk y poder procesarlo.
 
 tabla_2 %>%  
 tipo
@@ -61,7 +63,7 @@ Veamos la tabla5
 ```{r ver_tabla5}
 view(tabla5)
 ```
-Unite: sirve generar una nueva columna que es la unión de otras 2.
+Unite: sirve generar una nueva columna que es la unión de aquellas que se indiquen para unir.
 
 ```{r unite}
 tabla_unite <- tabla5 %>% 
@@ -94,7 +96,8 @@ tablita <- tibble(x1 = c(1, 3, "a"),  y1 = c("z", "x, y", NA))
 tablita %>% mutate(y1 = replace_na(y1, "desconocido"))
 ```
 
-## Ejercicio final: Vamos a definir una tabla llamada prueba, que tiene el precio de venta y el costo de 3 productos.
+## Ejercicio final: 
+Vamos a definir una tabla llamada prueba, que tiene el precio de venta y el costo de 3 productos.
 vamos a unir las columnas "precio_venta" y "costo" con el separador "/"  generando una columna "incidencia" 
 luego vamos a separar las columnas sin indicar el argumento separador. 
 Qué pasó? quedaron igual que antes el precio_venta y el costo?
