@@ -18,13 +18,16 @@ view(tabla4a)
 ```
 
 ## Ejercicio NB_1: 
-Completar los espacios en blanco con lo que corresponda para que la tabla quede "ordenada" (tidy)
+Completar los espacios en blanco con lo que corresponda para que la tabla quede "ordenada" (tidy)  
+*Las siguientes lineas tienen palabras que son erróneas, seleccionar las que consideren correctas.*
 
 "casos"  
 anio  
 casos  
 "anio"  
 c('1999','2000')  
+
+Recomendación: si se animan escriban directamente sin usar las palabras sugeridas arriba      :)
 
 ```{r pivot_longer}
 # tabla_larga <-tabla4a %>%
