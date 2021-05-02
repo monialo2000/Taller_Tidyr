@@ -98,15 +98,12 @@ tablita %>% mutate(y1 = replace_na(y1, "desconocido"))
 ```
 
 ## Ejercicio final: 
-Vamos a definir una tabla llamada prueba, que tiene el precio de venta y el costo de 3 productos.
-vamos a unir las columnas "precio_venta" y "costo" con el separador "/"  generando una columna "incidencia" 
-luego vamos a separar las columnas sin indicar el argumento separador. 
+Vamos a definir una tabla llamada prueba, que tiene el precio de venta y el costo de 3 productos.  
+Vamos a unir ("unite") las columnas "precio_venta" y "costo" con el separador "/"  generando una columna "incidencia"   
+Luego vamos a volver a separar ("separate") las columnas sin indicar el argumento separador.   
 Qué pasó? quedaron igual que antes el precio_venta y el costo?
 
-```{r ejercicio3}
-#tabla_normalizada %>% 
-#  mutate(poblacion = poblacion/100) %>% 
-
+```{r ejercicio final}
 prueba <- tribble(~Producto, ~precio_venta, ~costo,
                         "pro1", 143, 15, 
                         "pro2", 250, 90,  

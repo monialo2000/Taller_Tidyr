@@ -1686,11 +1686,11 @@ tablita %&gt;% mutate(y1 = replace_na(y1, &quot;desconocido&quot;))</code></pre>
 </div>
 <div id="ejercicio-final" class="section level2">
 <h2>Ejercicio final:</h2>
-<p>Vamos a definir una tabla llamada prueba, que tiene el precio de venta y el costo de 3 productos. vamos a unir las columnas “precio_venta” y “costo” con el separador “/” generando una columna “incidencia” luego vamos a separar las columnas sin indicar el argumento separador. Qué pasó? quedaron igual que antes el precio_venta y el costo?</p>
-<pre class="r"><code>#tabla_normalizada %&gt;% 
-#  mutate(poblacion = poblacion/100) %&gt;% 
-
-prueba &lt;- tribble(~Producto, ~precio_venta, ~costo,
+<p>Vamos a definir una tabla llamada prueba, que tiene el precio de venta y el costo de 3 productos.<br />
+Vamos a unir (“unite”) las columnas “precio_venta” y “costo” con el separador “/” generando una columna “incidencia”<br />
+Luego vamos a volver a separar (“separate”) las columnas sin indicar el argumento separador.<br />
+Qué pasó? quedaron igual que antes el precio_venta y el costo?</p>
+<pre class="r"><code>prueba &lt;- tribble(~Producto, ~precio_venta, ~costo,
                         &quot;pro1&quot;, 143, 15, 
                         &quot;pro2&quot;, 250, 90,  
                         &quot;pro3&quot;, 1520, 250.5)</code></pre>
