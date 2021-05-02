@@ -18,13 +18,13 @@ view(tabla4a)
 ```
 
 ## Ejercicio NB_1: 
-Completar los espacios en blanco con lo que corresponda para que la tabla quede "ordenada"
+Completar los espacios en blanco con lo que corresponda para que la tabla quede "ordenada" (tidy)
 
-c('1999','2000')
-anio
-"anio"
-"casos"
-casos
+"casos"  
+anio  
+casos  
+"anio"  
+c('1999','2000')  
 
 ```{r pivot_longer}
 # tabla_larga <-tabla4a %>%
@@ -41,21 +41,22 @@ view(tabla2)
 ## Ejercicio NB_2: 
 ordenar los trozos de la función pivot_wider que figuran aquí abajo, para poder completar la función del  chunk y poder procesarlo.
 
-tabla_2 %>%  
-tipo
-cuenta
-values_from  
-names_from   
-,  
-pivot_wider(  
-=  
-=  
-,  
-)  
+tabla_2 %>%    
+tipo  
+cuenta  
+values_from    
+names_from     
+,    
+pivot_wider(    
+=    
+=    
+,    
+)    
   
 ```{r pivot_wider}
 #tabla_ancha <-
 ```
+
 
 ## Otras funciones útiles:
 
