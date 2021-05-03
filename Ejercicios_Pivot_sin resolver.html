@@ -1627,8 +1627,17 @@ pre code {
 <h2>Pivot longer</h2>
 <p>Veamos la tabla4a que estructura tiene</p>
 <pre class="r"><code>view(tabla4a)</code></pre>
-<p>Ejercicio: Completar los espacios en blanco con lo que corresponda para que la tabla quede “ordenada”</p>
-<p>c(‘1999’,‘2000’) anio “anio” “casos” casos</p>
+</div>
+<div id="ejercicio-nb_1" class="section level2">
+<h2>Ejercicio NB_1:</h2>
+<p>Completar los espacios en blanco con lo que corresponda para que la tabla quede “ordenada” (tidy)<br />
+<em>Las siguientes lineas tienen palabras que son erróneas, seleccionar las que consideren correctas.</em></p>
+<p>“casos”<br />
+anio<br />
+casos<br />
+“anio”<br />
+c(‘1999’,‘2000’)</p>
+<p>Recomendación: si se animan escriban directamente sin usar las palabras sugeridas arriba :)</p>
 <pre class="r"><code># tabla_larga &lt;-tabla4a %&gt;%
 #  pivot_longer(            , names_to =             , values_to =               )</code></pre>
 </div>
@@ -1636,9 +1645,14 @@ pre code {
 <h2>Pivot wider</h2>
 <p>Veamos la estructura de la tabla2</p>
 <pre class="r"><code>view(tabla2)</code></pre>
-<p>Ejercicio: ordenar los trozos de la función pivot_wider que figuran aquí abajo, para poder completar la función del chunk y poder procesarlo.</p>
+</div>
+<div id="ejercicio-nb_2" class="section level2">
+<h2>Ejercicio NB_2:</h2>
+<p>ordenar los trozos de la función pivot_wider que figuran aquí abajo, para poder completar la función del chunk y poder procesarlo.</p>
 <p>tabla_2 %&gt;%<br />
-tipo cuenta values_from<br />
+tipo<br />
+cuenta<br />
+values_from<br />
 names_from<br />
 ,<br />
 pivot_wider(<br />
@@ -1652,7 +1666,7 @@ pivot_wider(<br />
 <h2>Otras funciones útiles:</h2>
 <p>Veamos la tabla5</p>
 <pre class="r"><code>view(tabla5)</code></pre>
-<p>Unite: sirve generar una nueva columna que es la unión de otras 2.</p>
+<p>Unite: sirve generar una nueva columna que es la unión de aquellas que se indiquen para unir.</p>
 <pre class="r"><code>tabla_unite &lt;- tabla5 %&gt;% 
   unite(anio, c(&quot;siglo&quot;, &quot;anio&quot;), sep = &quot;&quot;)</code></pre>
 <p>Separate: sirve generar nuevas columnas separando el contenido de una columna que tiene caracteres separadores:</p>
@@ -1672,13 +1686,13 @@ tablita %&gt;% mutate(y1 = replace_na(y1, &quot;desconocido&quot;))</code></pre>
   </script>
 </div>
 </div>
-<div id="ejercicio-final-vamos-a-definir-una-tabla-llamada-prueba-que-tiene-el-precio-de-venta-y-el-costo-de-3-productos." class="section level2">
-<h2>Ejercicio final: Vamos a definir una tabla llamada prueba, que tiene el precio de venta y el costo de 3 productos.</h2>
-<p>vamos a unir las columnas “precio_venta” y “costo” con el separador “/” generando una columna “incidencia” luego vamos a separar las columnas sin indicar el argumento separador. Qué pasó? quedaron igual que antes el precio_venta y el costo?</p>
-<pre class="r"><code>#tabla_normalizada %&gt;% 
-#  mutate(poblacion = poblacion/100) %&gt;% 
-
-prueba &lt;- tribble(~Producto, ~precio_venta, ~costo,
+<div id="ejercicio-final" class="section level2">
+<h2>Ejercicio final:</h2>
+<p>Vamos a definir una tabla llamada prueba, que tiene el precio de venta y el costo de 3 productos.<br />
+Vamos a unir (“unite”) las columnas “precio_venta” y “costo” con el separador “/” generando una columna “incidencia”<br />
+Luego vamos a volver a separar (“separate”) las columnas sin indicar el argumento separador.<br />
+Qué pasó? quedaron igual que antes el precio_venta y el costo?</p>
+<pre class="r"><code>prueba &lt;- tribble(~Producto, ~precio_venta, ~costo,
                         &quot;pro1&quot;, 143, 15, 
                         &quot;pro2&quot;, 250, 90,  
                         &quot;pro3&quot;, 1520, 250.5)</code></pre>

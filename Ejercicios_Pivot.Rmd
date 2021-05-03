@@ -44,7 +44,7 @@ view(tabla2)
 ## Ejercicio NB_2: 
 ordenar los trozos de la función pivot_wider que figuran aquí abajo, para poder completar la función del  chunk y poder procesarlo.
 
-tabla_2 %>%    
+tabla2 %>%    
 tipo  
 cuenta  
 values_from    
@@ -57,7 +57,8 @@ pivot_wider(
 )    
   
 ```{r pivot_wider}
-#tabla_ancha <-
+#tabla_ancha <- 
+
 ```
 
 
