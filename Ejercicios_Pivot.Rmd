@@ -55,11 +55,11 @@ names_from
 pivot_wider(    
 =    
 =    
-,    
 )    
   
 ```{r pivot_wider}
 #tabla_ancha <- 
+
 
 ```
 
