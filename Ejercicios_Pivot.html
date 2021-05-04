@@ -1636,10 +1636,11 @@ pre code {
 anio<br />
 casos<br />
 “anio”<br />
-c(‘1999’,‘2000’)</p>
+c(‘1999’,‘2000’)<br />
+‘1999’:‘2000’</p>
 <p>Recomendación: si se animan escriban directamente sin usar las palabras sugeridas arriba :)</p>
 <pre class="r"><code># tabla_larga &lt;-tabla4a %&gt;%
-#  pivot_longer(            , names_to =             , values_to =               )</code></pre>
+#  pivot_longer(            , names_to =         , values_to =         )</code></pre>
 </div>
 <div id="pivot-wider" class="section level2">
 <h2>Pivot wider</h2>
@@ -1668,7 +1669,7 @@ pivot_wider(<br />
 <pre class="r"><code>view(tabla5)</code></pre>
 <p>Unite: sirve generar una nueva columna que es la unión de aquellas que se indiquen para unir.</p>
 <pre class="r"><code>tabla_unite &lt;- tabla5 %&gt;% 
-  unite(anio, c(&quot;siglo&quot;, &quot;anio&quot;), sep = &quot;&quot;)</code></pre>
+  unite(anio, c(siglo, anio), sep = &quot;&quot;)</code></pre>
 <p>Separate: sirve generar nuevas columnas separando el contenido de una columna que tiene caracteres separadores:</p>
 <pre class="r"><code>tabla_normalizada &lt;- tabla_unite %&gt;%
   separate(col = tasa, into = c(&quot;casos&quot;, &quot;poblacion&quot;))</code></pre>

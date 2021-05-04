@@ -8,6 +8,7 @@ output:
 
 ```{r setup, include=FALSE}
 library(tidyverse)
+library(rmarkdown)
 library(datos)
 ```
 
@@ -26,12 +27,13 @@ anio
 casos  
 "anio"  
 c('1999','2000')  
+'1999':'2000'
 
 Recomendación: si se animan escriban directamente sin usar las palabras sugeridas arriba      :)
 
 ```{r pivot_longer}
 # tabla_larga <-tabla4a %>%
-#  pivot_longer(            , names_to =             , values_to =               )
+#  pivot_longer(            , names_to =         , values_to =         )
 ```
 
 ## Pivot wider
@@ -72,7 +74,7 @@ Unite: sirve generar una nueva columna que es la unión de aquellas que se indiq
 
 ```{r unite}
 tabla_unite <- tabla5 %>% 
-  unite(anio, c("siglo", "anio"), sep = "")
+  unite(anio, c(siglo, anio), sep = "")
 ```
 
 Separate: sirve generar nuevas columnas separando el contenido de una columna que tiene caracteres separadores:
